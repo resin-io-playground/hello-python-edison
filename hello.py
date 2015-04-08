@@ -1,3 +1,3 @@
 #!/usr/bin/python
 
-print "hello python!"
+print "hello Mr. Edison!"
