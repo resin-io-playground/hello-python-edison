@@ -1,8 +1,9 @@
-FROM resin/i386-debian:latest
+FROM resin/edison-python:latest
+# Enable systemd
+ENV INITSYSTEM on
 
-# Install Python.
-RUN apt-get update && apt-get install -y python
+#Copy contents of app from our repo into /usr/src/app into our container.
+ADD app/ /usr/src/app
 
-ADD . /app
-
-CMD ["python", "/app/hello.py"]
+#run hello.py when the container starts on the device.
+CMD ["python", "usr/src/app/hello.py"]
