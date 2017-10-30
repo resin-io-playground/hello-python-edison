@@ -1,4 +1,4 @@
-FROM resin/edison-python:latest
+FROM resin/intel-edison-python:latest
 # Enable systemd
 ENV INITSYSTEM on
 
